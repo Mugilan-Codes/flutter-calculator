@@ -83,22 +83,32 @@ class _HomePageState extends State<HomePage> {
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
                     ElevatedButton(
-                      onPressed: () => doAddition(),
+                      onPressed: doAddition,
                       child: const Text("+"),
                       style: ElevatedButton.styleFrom(primary: Colors.green),
                     ),
                     ElevatedButton(
-                        onPressed: () => doSubtraction(),
+                        onPressed: doSubtraction,
                         child: const Text("-"),
                         style: ElevatedButton.styleFrom(primary: Colors.green)),
                     ElevatedButton(
-                        onPressed: () => doMultiplication(),
+                        onPressed: doMultiplication,
                         child: const Text("*"),
                         style: ElevatedButton.styleFrom(primary: Colors.green)),
                     ElevatedButton(
-                        onPressed: () => doDivision(),
+                        onPressed: doDivision,
                         child: const Text("/"),
                         style: ElevatedButton.styleFrom(primary: Colors.green))
+                  ],
+                ),
+                const Padding(padding: EdgeInsets.only(top: 20.0)),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    MaterialButton(
+                        onPressed: doClear,
+                        child: const Text("Clear"),
+                        color: Colors.greenAccent)
                   ],
                 )
               ],
